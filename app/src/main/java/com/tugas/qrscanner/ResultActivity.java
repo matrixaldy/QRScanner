@@ -6,6 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -13,7 +16,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ResultActivity extends AppCompatActivity {
-    TextView textViewResult;
+    TextView textViewResult, textViewFrom, textViewTo;
+    TextView textViewGate, textViewMaskapai;
+    TextView textViewBoarding, textViewFlight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +30,14 @@ public class ResultActivity extends AppCompatActivity {
 
         int result = Integer.parseInt(UniqueID);
 
-        textViewResult = (TextView) findViewById(R.id.text_view_result);
+        //textViewResult = (TextView) findViewById(R.id.text_view_result);
+        textViewBoarding = (TextView) findViewById(R.id.text_view_time);
+        textViewFlight = (TextView) findViewById(R.id.text_view_flight);
+        textViewFrom = (TextView) findViewById(R.id.text_view_from);
+        textViewTo = (TextView) findViewById(R.id.text_view_to);
+        textViewGate = (TextView) findViewById(R.id.text_view_gate);
+        textViewMaskapai = (TextView) findViewById(R.id.text_view_maskapai);
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://test.riandyfadly.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -45,13 +57,21 @@ public class ResultActivity extends AppCompatActivity {
 
                 Fri fri = response.body();
                 String content = "";
-                content += "Unique ID \t\t\t: " + fri.getUniqueId() + "\n";
-                content += "Airline Code \t\t: " + fri.getAirlineCode() + "\n";
-                content += "Flight Number \t: " + fri.getFlightNum() + "\n";
-                content += "Depart Gate \t\t: " + fri.getDepartGate() + "\n";
-
-
-                textViewResult.append(content);
+                /*
+                content += fri.getMaskapai() + "\n\n";
+                content += "Flight \n" + fri.getAirlineCode() + fri.getFlightNum() + "\n\n";
+                content += "Gate \n" + fri.getDepartGate() + "\n\n";
+                content += "Boarding Time \n" + fri.getStaTime() + "\n\n";
+                content += "FROM \n" + fri.getBerangkat() + "\n\n";
+                content += "TO \n" + fri.getDatang() + "\n\n";
+                */
+                textViewTo.setText(fri.getDatang() + " - " + fri.getArrivalStation());
+                textViewFrom.setText(fri.getBerangkat() + " - " + fri.getDepartStation());
+                textViewGate.setText(fri.getDepartGate());
+                textViewFlight.setText(fri.getFlightNum());
+                textViewMaskapai.setText(fri.getMaskapai());
+                textViewBoarding.setText(fri.getStaTime());
+                //textViewResult.append(content);
 
             }
 

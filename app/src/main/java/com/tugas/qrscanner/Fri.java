@@ -3,6 +3,8 @@ package com.tugas.qrscanner;
 
 import com.google.gson.annotations.SerializedName;
 
+
+
 public class Fri {
     @SerializedName("UniqueID")
     private int UniqueId;
@@ -13,8 +15,8 @@ public class Fri {
     @SerializedName("FLIGHT_NUM")
     private String FlightNum;
 
-//    @SerializedName("STA_TIME_STAMP")
-//    private Timestamp StaTime;
+    @SerializedName("STA_TIME_STAMP")
+    private String StaTime;
 
     @SerializedName("DGATE")
     private String DepartGate;
@@ -37,6 +39,15 @@ public class Fri {
     @SerializedName("INT_OR_DOM")
     private String  FlightType;
 
+    @SerializedName("maskapai")
+    private String Maskapai;
+
+    @SerializedName("keberangkatan")
+    private String Berangkat;
+
+    @SerializedName("kedatangan")
+    private String Datang;
+
     public int getUniqueId() {
         return UniqueId;
     }
@@ -52,6 +63,10 @@ public class Fri {
 
     public String getDepartGate() {
         return DepartGate;
+    }
+
+    public String getStaTime() {
+        return StaTime;
     }
 
     public String getDepartStation() {
@@ -70,7 +85,15 @@ public class Fri {
         return Terminal;
     }
 
-    public String getFlightType() {
-        return FlightType;
+    public String getMaskapai() {
+        return Maskapai;
+    }
+
+    public String getDatang() {
+        return Datang;
+    }
+
+    public String getBerangkat() {
+        return Berangkat;
     }
 }

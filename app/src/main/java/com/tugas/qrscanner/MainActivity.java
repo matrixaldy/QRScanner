@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textViewResult = (TextView)findViewById(R.id.text_view_result);
+        //textViewResult = (TextView)findViewById(R.id.text_view_result);
         scan_btn = (Button)findViewById(R.id.ok_btn);
         editText = (EditText)findViewById(R.id.editText);
     }
