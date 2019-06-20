@@ -83,9 +83,8 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DEPARTURE GATE"
+            android:text="BAGAGE CLAIM NUMBER"
             android:textSize="15dp" />
-
 
         <TextView
             android:id="@+id/text_view_gate"
@@ -119,6 +118,13 @@
             android:layout_height="1dp"
             android:background="#000"
             />
+
+        <TextView
+            android:textColor="#000"
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:text="@string/thanks"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

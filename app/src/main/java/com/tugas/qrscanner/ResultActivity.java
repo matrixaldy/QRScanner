@@ -68,7 +68,7 @@ public class ResultActivity extends AppCompatActivity {
                 textViewTo.setText(fri.getDatang() + " - " + fri.getArrivalStation());
                 textViewFrom.setText(fri.getBerangkat() + " - " + fri.getDepartStation());
                 textViewGate.setText(fri.getDepartGate());
-                textViewFlight.setText(fri.getFlightNum());
+                textViewFlight.setText(fri.getAirlineCode() + fri.getFlightNum());
                 textViewMaskapai.setText(fri.getMaskapai());
                 textViewBoarding.setText(fri.getStaTime());
                 //textViewResult.append(content);
