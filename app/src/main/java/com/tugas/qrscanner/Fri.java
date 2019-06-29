@@ -48,6 +48,12 @@ public class Fri {
     @SerializedName("kedatangan")
     private String Datang;
 
+    @SerializedName("ACTUAL_CLAIM")
+    private String Claim;
+
+    @SerializedName("RECLAIM_FIRST_BAG_TIME")
+    private String ReclaimBag;
+
     public int getUniqueId() {
         return UniqueId;
     }
@@ -95,5 +101,13 @@ public class Fri {
 
     public String getBerangkat() {
         return Berangkat;
+    }
+
+    public String getActualClaim() {
+        return Claim;
+    }
+
+    public String getReclaim() {
+        return ReclaimBag;
     }
 }

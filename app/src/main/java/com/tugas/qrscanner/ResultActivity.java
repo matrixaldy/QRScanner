@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ResultActivity extends AppCompatActivity {
     TextView textViewResult, textViewFrom, textViewTo;
-    TextView textViewGate, textViewMaskapai;
+    TextView textViewClaim, textViewMaskapai, textViewClaimTime;
     TextView textViewBoarding, textViewFlight;
 
     @Override
@@ -35,8 +35,9 @@ public class ResultActivity extends AppCompatActivity {
         textViewFlight = (TextView) findViewById(R.id.text_view_flight);
         textViewFrom = (TextView) findViewById(R.id.text_view_from);
         textViewTo = (TextView) findViewById(R.id.text_view_to);
-        textViewGate = (TextView) findViewById(R.id.text_view_gate);
+        textViewClaim = (TextView) findViewById(R.id.text_view_claim_number);
         textViewMaskapai = (TextView) findViewById(R.id.text_view_maskapai);
+        textViewClaimTime = (TextView) findViewById(R.id.text_view_first_claim);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://test.riandyfadly.com/api/")
@@ -65,12 +66,14 @@ public class ResultActivity extends AppCompatActivity {
                 content += "FROM \n" + fri.getBerangkat() + "\n\n";
                 content += "TO \n" + fri.getDatang() + "\n\n";
                 */
+
                 textViewTo.setText(fri.getDatang() + " - " + fri.getArrivalStation());
                 textViewFrom.setText(fri.getBerangkat() + " - " + fri.getDepartStation());
-                textViewGate.setText(fri.getDepartGate());
+                textViewClaim.setText(fri.getActualClaim().replaceAll("[^0-9]", ""));
                 textViewFlight.setText(fri.getAirlineCode() + fri.getFlightNum());
                 textViewMaskapai.setText(fri.getMaskapai());
                 textViewBoarding.setText(fri.getStaTime());
+                textViewClaimTime.setText(fri.getReclaim());
                 //textViewResult.append(content);
 
             }
