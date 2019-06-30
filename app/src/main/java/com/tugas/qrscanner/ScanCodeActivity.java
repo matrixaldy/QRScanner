@@ -1,5 +1,6 @@
 package com.tugas.qrscanner;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,6 +13,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     ZXingScannerView ScannerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -31,7 +31,6 @@ public class ResultActivity extends AppCompatActivity {
         int result = Integer.parseInt(UniqueID);
 
         //textViewResult = (TextView) findViewById(R.id.text_view_result);
-        textViewBoarding = (TextView) findViewById(R.id.text_view_time);
         textViewFlight = (TextView) findViewById(R.id.text_view_flight);
         textViewFrom = (TextView) findViewById(R.id.text_view_from);
         textViewTo = (TextView) findViewById(R.id.text_view_to);
@@ -72,7 +71,6 @@ public class ResultActivity extends AppCompatActivity {
                 textViewClaim.setText(fri.getActualClaim().replaceAll("[^0-9]", ""));
                 textViewFlight.setText(fri.getAirlineCode() + fri.getFlightNum());
                 textViewMaskapai.setText(fri.getMaskapai());
-                textViewBoarding.setText(fri.getStaTime());
                 textViewClaimTime.setText(fri.getReclaim());
                 //textViewResult.append(content);
 

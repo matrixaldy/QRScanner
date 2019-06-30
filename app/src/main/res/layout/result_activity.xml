@@ -60,51 +60,11 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BOARDING TIME"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:id="@+id/text_view_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000"
-                    />
-
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="FROM"
                     android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/text_view_from"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000"
-                    />
-
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BAGGAGE CLAIM NUMBER"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:id="@+id/text_view_claim_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -145,6 +105,26 @@
 
                 <TextView
                     android:id="@+id/text_view_first_claim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000"
+                    />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BAGGAGE CLAIM NUMBER"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/text_view_claim_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
