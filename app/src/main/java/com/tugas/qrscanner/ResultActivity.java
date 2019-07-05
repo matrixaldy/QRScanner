@@ -2,12 +2,8 @@ package com.tugas.qrscanner;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ResultActivity extends AppCompatActivity {
     TextView textViewResult, textViewFrom, textViewTo;
     TextView textViewClaim, textViewMaskapai, textViewClaimTime;
-    TextView textViewBoarding, textViewFlight;
+    TextView textViewFlight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
