@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
         textViewClaimTime = (TextView) findViewById(R.id.text_view_first_claim);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://test.riandyfadly.com/api/")
+                .baseUrl("http://34.87.73.70/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
